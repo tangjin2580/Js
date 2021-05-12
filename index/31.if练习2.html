@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    var height =prompt("身高多少（cm）：");
+    var money=prompt("有多少存款（万）：");
+    var face =prompt("颜值多少（px）：");
+    //同时满足
+    if(height > 180 && money > 100 &&  face > 150){
+        alert("满足")
+    }
+    //在函数加个加号可以转换为数字
+    var n1 = +prompt("请输入第一个数：");
+    var n2 = +prompt("请输入第二个数：");
+    var n3 = +prompt("请输入第三个数：");
+    if (n1 < n2 && n1 < n3){
+        if (n2<n3) {
+            //n1最小，比较n2，n3
+            alert(n1 + "" + n2 + "" + n3);
+        }
+    }else if (n2 < n1 && n2 < n3){
+        if (n1<n3) {
+            alert(n2 + "" +n1+""+n3);
+        }
+    }else if (n3 < n1 && n3 <n2){
+        if (n1<n2){
+            alert(n3+""+n1+""+n2)
+        }
+    }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

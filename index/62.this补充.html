@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        闯将一个name变量
+         */
+        var name = "全局";
+
+        function fun(){
+            console.log(this.name);
+        }
+
+        var obj = {
+            name:"孙悟空",
+            sayname:fun
+        };
+
+        var obj2 = {
+            name:"沙和尚";
+            sayname:fun
+        };
+        obj.name();
+        obj2.name();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

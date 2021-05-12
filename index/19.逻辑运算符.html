@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        ！非
+         -所谓非运算就是指对一个指进行取反操作
+          ture->false false->ture
+         -如果对一个值两次取反，它不会变化
+         -如果对非布尔值进行运算，将其转换为布尔值，再进行运算，
+         所以可以利用该特点，来将一个其他类型的值转换为布尔值
+         可以为一个任意数据类型取两次反，来讲其转换为布尔值
+         原理和Boolean（）函数一样
+         -
+
+        &&与
+        -可以对符号两侧的值，进行与运算，并返回结果
+        -运算规则,两同都同
+        JS的“与”属于短路与，如果第一个值为false，则不会继续执行
+
+        ||或
+        只有一个true就返回true
+        都是false才是false
+        Js中的“或”属于短路或，如果第一个值为true ，则不会检查第二个
+         */
+        var a = false ;
+        //对a进行非运算
+        a = !a;
+        console.log(a)
+
+        var b = 10;
+        b = !!b;
+        console.log(b)
+
+        var result = true &&false;
+        var result = true &&true;
+        var result = false &&false;
+        console.log(result);
+
+        res = false || false;
+        res= true &&true;
+        res = false &&false;
+        console.log(res)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

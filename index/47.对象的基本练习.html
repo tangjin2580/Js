@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../jquery/jquery-3.5.1.js">
+/*
+使用new关键字调用的函数，数构造函数constructior
+构造函数是专门创建对象的
+在对象中保存的值叫属性
+向对象添加属性
+语法：对象.属性名=属性值
+如果读取对象中没有的属性，不会报错，直接返回underfined
+ */
+</script>
+<script>
+    var obj = new Object();
+    obj.name="孙";
+    obj.age=18;
+    console.log(obj);
+    //读取对象属性
+    //语法：对象.属性名
+    obj.name="tom";
+    //删除对象属性
+    delete  obj.name;
+    alert(obj.name);
+</script>
+<body>
+
+</body>
+</html>

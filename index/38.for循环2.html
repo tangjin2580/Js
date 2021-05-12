@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../jquery/jquery-3.5.1.js">
+
+</script>
+    <script>
+        /*
+
+         */
+
+        {
+            //质数和
+            var sum = 0;
+            for (var i = 1; i <= 100; i++) {
+                if (i % 2 != 0) {
+                    console.log(i)
+                    sum = sum + i;
+                }
+            }
+            alert(sum);
+        }
+
+        {
+
+            for (var a = 1 , total = 0 ,count = 0; a <= 100 ; a++){
+                if (a % 7 == 0){
+                console.log(a)
+                total += a ;
+                count++;
+                }
+
+            }
+            alert(total);
+
+        }
+
+        {
+            //水仙花数
+            for (var i1 = 100 ; i1  < 1000 ; i1++ ){
+                var bai = parseInt(i1/100);
+                var shi = parseInt((i1 - bai*100)/10);
+                var ge =  i1/10;
+                if (bai*bai*bai+shi*shi*shi+ge*ge*ge === i1){
+                    alert(是水仙花)
+                }
+            }
+        }
+
+
+
+    </script>
+<body>
+
+</body>
+</html>

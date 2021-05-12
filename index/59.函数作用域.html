@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    /*
+    函数作用域
+     -调用函数时创建函数作用域,函数执行完毕后,函数作用域销毁
+     -每调用一次函数,就会创建一个新的函数作用域,他们之间是互相独立的
+     -在函数作用域中可以访问到全局作用域的变量
+     在全局无法访问局部
+     -挡在函数作用域中操作一遍变量时,先在自身作用域中寻找
+     如果没有就向上一级寻找,直到找到全局作用域
+     如果全局作用域依然没有找到,则会报错ReferenceError
+     -在函数中要访问全局变量可以使用window对象
+     */
+
+    var a= 10;
+    function fun(){
+    console.log(a);
+    }
+    fun();
+
+    /*
+    在函数作用域中也有声明提前的特性
+    使用var关键字声明的变量,会在函数中所有的代码执行前被声明
+    函数声明也会在所有代码执行前声明
+    在函数中,不使用var声明的变量都会成为全局变量
+     */
+    fun3();
+    function fun3() {
+        console.log(a);
+            var  a = 35 ;
+            d = 100;// --> window.d
+    }
+    fun4();
+    function fun4(e) {
+        alert(e);
+    }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

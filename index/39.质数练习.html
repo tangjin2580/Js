@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../jquery/jquery-3.5.1.js">
+
+</script>
+<script>
+    //测试程序性能，开始计时器
+    console.time("Start")
+    var num = prompt("请输入一个大于1的整数：");
+    if (num <= 1 ){
+        alert("该值不合法");
+    }else {
+        var flag = true ;
+        for (var i = 2 ; i < num; i ++){
+            console.log(i);
+            if (num % i == 0){
+                flag = false;
+
+            }
+        }
+        if (flag){
+        alert(num+"是质数");
+    }else {
+            alert("不是质数")
+        }
+    }
+    console.timeEnd("Start")
+</script>
+<body>
+
+</body>
+</html>

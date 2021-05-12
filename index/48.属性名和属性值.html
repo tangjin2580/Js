@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../jquery/jquery-3.5.1.js">
+/*
+对象属性名不强制要求遵守标识符规范
+使用[]这种形式去操作属性，更加灵活
+在[]中可以直接传递一个变量，这样变量值是多少就会读取那个属性
+JS对象的属性值，可以使任意数据类型，甚至也可以是一个对象
+ */
+</script>
+<script>
+    var obj = new Object();
+    obj.name="小敏"
+    obj["123"]=789;
+    var n = "123";
+    console.log(["123"]);
+    var ob = new Object();
+    obj.test = ob;
+    console.log(obj.test);
+    console.log("test" in ob);
+</script>
+<body>
+
+</body>
+</html>

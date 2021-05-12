@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+            /*
+            定义一个函数。判断一个数字是否偶数，如果是返回true，否则返回false
+            定义一个函数，可以根据半径计算一个园的面积，并返回计算结果
+            创建一个函数，可以在控制台中输出一个人的信息
+            当参数过多的时候，也可以传入对象里
+
+            message()
+            调用函数
+            相当于使用函数的返回值
+            message
+            函数对象
+            相当于直接使用函数对象
+             */
+
+
+             function isOu(num){
+                 /*
+                                  if(num % 2 == 0){
+                                      return true ;
+                                  }else{
+                                      return false;
+                                  }
+                                  等价于
+                 */
+                 return num % 2 ==0;
+             }
+
+            function mianji(r){
+                return(3.14*r*r);
+            }
+            var s = mianji(2);
+            alert(s);
+
+            function message(p){
+                alert("我是"+p.name+"今年"+p.age+"性别"+p.gender+"住在"+p.address);
+            }
+            var obj = {
+                name:"sun",
+                age:18,
+                gender:"男",
+                address:"china"
+            };
+            message(obj);
+
+            function fun(a){
+                console.log("a"+a);
+                a(obj)
+            }
+            fun(message)
+            fun(function (){alert("hello")});
+    </script>
+</head>
+<body>
+
+</body>
+</html>
