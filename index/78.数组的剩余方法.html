@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /**
+     * concat()可以连接两个或多个数组，并将新的数组返回
+     *      不会改变原数组
+     * join()
+     *      将数组转换为一个字符串
+     *      转换后的字符串作为结果返回，可以指定一个字符串作为参数，这个字符串会成为数组元素中的连接符
+     *      不指定，默认逗号
+     * reverse()
+     *      反转数组，会修改原数组
+     * sort()排序
+     *      默认按unicode编码排序，修改原数组
+     *      指定排序规则
+     *      回调函数需要定义两个形参
+     *      浏览器分别使用数组中的元素为实参区调用回调函数
+     *      使用哪个元素调用不确定，但a一定在b的前面
+     *      如何返回一个大于0的值，则元素交换位置
+     *      小于0，位置不变
+     *      返回一个0
+     *      认为两个元素相等，也不交换位置
+     */
+    var arr = ["孙", "猪", "沙"];
+    var arr2 = ["白", "牛", "蜘"];
+    var arr3 = [9, 1];
+    var a = arr.concat(arr2, "铁");
+    var b = arr.join("+");
+    arr.reverse();
+    arr.sort();
+    console.log(a);
+    console.log(b);
+    console.log(arr);
+
+    arr.sort(function(a, b) {
+        if (a > b) {
+            return -1;
+        } else if (a < b) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+    .swiper{
+    	position:relative;
+    	width:600px;
+    	height:300px;
+    	margin:100px auto;
+    	overflow:hidden;
+    }
+    .imgs{
+    	position:absolute;
+    	top:0;
+    	left:0;
+    	width:500%;
+    	font-size:0;
+    	height:100%;
+        transition:0.2s;
+    }
+    .imgs img{
+    	width:20%;
+    	height:100%;
+    }
+    .pagination{
+    	position:absolute;
+    	bottom:0;
+    	left:0;
+    	height:50px;
+    	width:100%;
+    	background:rgba(255,255,255,0.5);
+    	text-align: center;
+    	line-height: 50px;
+    }
+    .pagination span{
+    	display:inline-block;
+    	width:10px;
+    	height:10px;
+    	border:1px solid #fff;
+    	border-radius:50%;
+    }
+	</style>
+	<script type="text/javascript">
+	var timer;
+	var showNext;
+    window.onload=function(){
+    	var i=0;
+    	var oImgs=document.getElementById("imgs");
+    	var oPagination=document.getElementById("pagination")
+    	var dots=oPagination.getElementsByTagName("span");
+    	dots[i].style.background="#fff";
+    	showNext=function (){
+    		dots[i].style.background="";
+    		i++;
+    		i%=5;
+    		oImgs.style.left="-"+i*600+"px";
+    		dots[i].style.background="#fff";
+    	}
+    	timer=setInterval(showNext,1000);
+    }
+    function stop(){
+    	clearInterval(timer);
+    }
+    function restart(){
+    	timer=setInterval(showNext,1000);
+    }
+	</script>
+</head>
+<body>
+	<div class="swiper" onmouseover="stop()" onmouseout="restart()">
+		<div class="imgs" id="imgs">
+		<a href="javascript:;">
+		<img src="images/car1.jpg" alt="">
+		</a>
+		<a href="javascript:;">
+		<img src="images/car2.jpg" alt="">
+		</a>
+		<a href="javascript:;">
+		<img src="images/car3.jpg" alt="">
+		</a>
+		<a href="javascript:;">
+		<img src="images/car4.jpg" alt="">
+		</a>
+		<a href="javascript:;">
+		<img src="images/car5.jpg" alt="">
+		</a>
+		</div>
+		<div class="pagination" id="pagination">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</body>
+</html>
